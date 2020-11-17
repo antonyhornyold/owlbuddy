@@ -25,6 +25,33 @@ v.colors_name = 'owlbuddy'
 -- COLOURS --
 
 Color.new('colourName', "#colour")
+Color.new('no_fg',          '#d6deeb')
+Color.new('no_bg',          '#011627')
+Color.new('no_comment_one', '#0d4572')
+Color.new('no_comment_two', '#315572')
+Color.new('no_lt_fg',       '#e7effc')
+
+Color.new('no_01',          '#00090f')
+Color.new('no_02',          '#000d17')
+Color.new('no_03',          '#01111f')
+Color.new('no_04',          '#011a2e')
+Color.new('no_05',          '#011e36')
+Color.new('no_06',          '#01223d')
+
+Color.new('no_yellow',      '#ecc48d')
+Color.new('no_orange',      '#f78c6c')
+Color.new('no_red',         '#ff5874')
+Color.new('no_pink',        '#ff869a')
+Color.new('no_purple',      '#c792ea')
+Color.new('no_blue',        '#82aaff')
+Color.new('no_cyan',        '#7fdbca')
+Color.new('no_green',       '#addb67')
+
+Color.new('no_lt_yellow',   '#fdf6e3')
+Color.new('no_lt_green',    '#d9f5dd')
+Color.new('no_br_green',    '#c5e478')
+Color.new('no_br_red',      '#ff2c83')
+Color.new('no_dk_red',      '#d3423e')
 
 -- TERMINAL COLOURS --
 

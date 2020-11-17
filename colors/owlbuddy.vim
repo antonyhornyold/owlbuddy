@@ -1,1 +1,1 @@
-lua require('spacebuddy')
+lua require('owlbuddy')

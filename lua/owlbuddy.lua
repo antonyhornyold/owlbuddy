@@ -3,7 +3,6 @@
 -- Author:       Antony Hornyold
 -- Website:      https://github.com/antonyhornyold/owlbuddy
 
-vim.cmd('packadd colorbuddy.nvim')
 local Color, colors, Group, groups, styles = require("colorbuddy").setup()
 local Color = require('colorbuddy.color').Color
 local Group = require('colorbuddy.group').Group

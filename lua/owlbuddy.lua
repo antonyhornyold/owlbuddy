@@ -1,9 +1,8 @@
--- Name:         Spacebuddy
--- Description:  Light and dark theme inspired by spacemacs-theme
--- Author:       Th3Whit3Wolf <the.white.wolf.is.1337@gmail.com>
--- Maintainer:   Th3Whit3Wolf <the.white.wolf.is.1337@gmail.com>
--- Website:      https://github.com/Th3Whit3Wolf/spacebuddy
--- License:      Vim License (see `:help license`)
+-- Name:         Owlbuddy
+-- Description:  colorbuddy theme based on night owl (sdras/night-owl-vscode-theme)
+-- Author:       Antony Hornyold
+-- Website:      https://github.com/antonyhornyold/owlbuddy
+
 vim.cmd('packadd colorbuddy.nvim')
 local Color, colors, Group, groups, styles = require("colorbuddy").setup()
 local Color = require('colorbuddy.color').Color
@@ -21,128 +20,17 @@ local sto = s.standout
 local no = s.NONE
 local v = vim.g
 
-v.colors_name = 'spacebuddy'
+v.colors_name = 'owlbuddy'
 
-if vim.o.background == 'dark' then
-    -- Dark Colors
-    Color.new('bg0', "#292b2e")
-    Color.new('bg1', "#212026")
-    Color.new('bg2', "#100a14")
-    Color.new('bg3', "#0a0814")
-    Color.new('bg4', "#34323e")
-    Color.new('fg0', "#cdcdcd")
-    Color.new('fg1', "#b2b2b2")
-    Color.new('fg2', "#8e8e8e")
-    Color.new('fg3', "#727272")
-    Color.new('fg4', "#5b5b5b")
-    Color.new('fg5', "#9a9aba")
-    Color.new('fg6', "#5e5079")
-    Color.new('fg7', "#666666")
-    Color.new('grey', "#44505c")
-    Color.new('grey1', "#768294")
-    Color.new('red1', "#ce537a")
-    Color.new('blue1', "#7590db")
-    Color.new('purple0', "#bc6ec5")
-    Color.new('purple1', "#d698fe")
-    Color.new('purple2', "#a45bad")
-    Color.new('purple3', "#5d4d7a")
-    Color.new('purple4', "#34323e")
-    Color.new('aqua0', "#2d9574")
-    Color.new('orange0', "#e18254")
-    Color.new('cyan', "#28def0")
-    Color.new('mat', "#86dc2f")
-    Color.new('meta', "#9f8766")
-    Color.new('highlight', "#444155")
-    Color.new('comp', "#c56ec3")
-    Color.new('cblk', "#cbc1d5")
-    -- Terminal Colors
-    v.terminal_color_0 = '#292b2e'
-    v.terminal_color_8 = '#44505c'
-    v.terminal_color_12 = '#4f97d7'
-    v.terminal_color_13 = '#bc6ec5'
-    v.terminal_color_14 = '#2d9574'
-    v.terminal_color_7 = '#5b5b5b'
-    v.terminal_color_15 = '#b2b2b2'
-else
-    -- Light Colors
-    Color.new('bg0', "#fbf8ef")
-    Color.new('bg1', "#efeae9")
-    Color.new('bg2', "#e3dedd")
-    Color.new('bg3', "#d2ceda")
-    Color.new('bg4', "#a8a4ae")
-    Color.new('fg0', "#83758c")
-    Color.new('fg1', "#655370")
-    Color.new('fg2', "#5a4a64")
-    Color.new('fg3', "#504259")
-    Color.new('fg4', "#463a4e")
-    Color.new('fg5', "#8c799f")
-    Color.new('fg6', "#c8c6dd")
-    -- Color.new('fg7', "#666666")
-    Color.new('grey', "#a8a8bf")
-    Color.new('grey1', "#768294")
-    Color.new('red1', "#ba2f59")
-    Color.new('blue1', "#715ab1")
-    Color.new('purple0', "#6c3163")
-    Color.new('purple1', "#86589e")
-    Color.new('purple2', "#4e3163")
-    Color.new('purple3', "#d3d3e7")
-    Color.new('purple4', "#e2e0ea")
-    Color.new('aqua0', "#24775c")
-    Color.new('orange0', "#b46843")
-    Color.new('cyan', "#21b8c7")
-    Color.new('mat', "#ba2f59")
-    Color.new('meta', "#da8b55")
-    Color.new('highlight', "#d3d3e7")
-    Color.new('comp', "#6c4173")
-    Color.new('cblk', "#655370")
-    -- Terminal Colors
-    v.terminal_color_0 = '#fbf8ef'
-    v.terminal_color_8 = '#a8a8bf'
-    v.terminal_color_12 = '#3a81c3'
-    v.terminal_color_13 = '#6c3163'
-    v.terminal_color_14 = '#24775c'
-    v.terminal_color_7 = '#463a4e'
-    v.terminal_color_15 = '#655370'
-end
+-- COLOURS --
 
--------------------
--- Common Colors --
--------------------
+Color.new('colourName', "#colour")
 
-Color.new('red', "#f2241f")
-Color.new('red0', "#f54e3c")
-Color.new('blue', "#58b0d9")
-Color.new('blue0', "#4f97d7")
-Color.new('purple', "#544a65")
-Color.new('green', "#67b11d")
-Color.new('green0', "#2aa1ae")
-Color.new('aqua', "#4495b4")
-Color.new('orange', "#d79650")
-Color.new('yellow', "#b1951d")
-Color.new('yellow1', "#e5d11c")
-Color.new('war', "#dc752f")
-Color.new('number', "#e697e6")
-Color.new('debug', "#ffc8c8")
-Color.new('float', "#b7b7ff")
-Color.new('delim', "#74baac")
+-- TERMINAL COLOURS --
 
-----------------------------
--- Common Terminal Colors --
-----------------------------
+v.terminal_color_1 = '#colour'
 
-v.terminal_color_1 = '#d26487'
-v.terminal_color_2 = '#35a8a5'
-v.terminal_color_3 = '#b89f33'
-v.terminal_color_4 = '#6981c5'
-v.terminal_color_5 = '#a15ea7'
-v.terminal_color_6 = '#288668'
-v.terminal_color_9 = '#f2241f'
-v.terminal_color_10 = '#67b11d'
-v.terminal_color_11 = '#b1951d'
-
--------------------------------------------------------------
 -- Syntax Groups (descriptions and ordering from `:h w18`) --
--------------------------------------------------------------
 
 Group.new('Comment', c.green0, c.none, i) -- any comment
 Group.new('Constant', c.green0, c.none, no) -- any constant
@@ -179,9 +67,7 @@ Group.new('Ignore', c.float, c.none, no) -- left blank, hidden
 Group.new('Error', c.red, c.none, b + r) -- any erroneous construct
 Group.new('Todo', c.orange0, c.none, b + i) -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
---------------------------------------------------------------------------------
 -- Highlighting Groups (descriptions and ordering from `:h highlight-groups`) --
---------------------------------------------------------------------------------
 
 Group.new('ColorColumn', c.fg0, c.bg1, no) --  used for the columns set with 'colorcolumn'
 Group.new('Conceal', c.blue0, c.bg0, no) -- placeholder characters substituted for concealed text (see 'conceallevel')
@@ -232,9 +118,7 @@ Group.new('VisualNOS', g.Visual, g.Visual, g.Visual) -- Visual mode selection wh
 Group.new('WarningMsg', c.red, c.none, no) --  warning messages
 Group.new('WildMenu', c.orange0, c.bg1, b) --  current match in 'wildmenu' completion
 
---------------------------------
 -- Miscellaneous Highlighting --
---------------------------------
 
 Group.new('CursorColumn', c.none, c.bg1, no)
 Group.new('CursorLine', c.none, c.bg1, no)
@@ -247,42 +131,15 @@ Group.new('VisualMode', c.orange0, c.none, r)
 Group.new('CommandMode', c.purple0, c.none, r)
 Group.new('Warnings', c.orange0, c.none, r)
 
-------------------------------------
 -- Language-Specific Highlighting --
-------------------------------------
 
--- C
-Group.new('cOperator', c.purple0, c.none, no)
-Group.new('cStructure', c.orange0, c.none, no)
 -- CoffeeScript
 Group.new('coffeeExtendedOp', c.fg3, c.none, no)
 Group.new('coffeeSpecialOp', c.fg3, c.none, no)
 Group.new('coffeeCurly', c.orange0, c.none, no)
 Group.new('coffeeParen', c.fg3, c.none, no)
 Group.new('coffeeBracket', c.orange0, c.none, no)
--- Clojure
-Group.new('clojureKeyword', c.blue0, c.none, no)
-Group.new('clojureCond', c.orange0, c.none, no)
-Group.new('clojureSpecial', c.orange0, c.none, no)
-Group.new('clojureDefine', c.orange0, c.none, no)
-Group.new('clojureFunc', c.yellow, c.none, no)
-Group.new('clojureRepeat', c.yellow, c.none, no)
-Group.new('clojureCharacter', c.aqua0, c.none, no)
-Group.new('clojureStringEscape', c.aqua0, c.none, no)
-Group.new('clojureException', c.red, c.none, no)
-Group.new('clojureRegexp', c.aqua0, c.none, no)
-Group.new('clojureRegexpEscape', c.aqua0, c.none, no)
-Group.new('clojureRegexpCharClass', c.fg3, c.none, b)
-Group.new('clojureRegexpMod', g.clojureRegexpCharClass, g.clojureRegexpCharClass, g.clojureRegexpCharClass)
-Group.new('clojureRegexpQuantifier', g.clojureRegexpCharClass, g.clojureRegexpCharClass, g.clojureRegexpCharClass)
-Group.new('clojureParen', c.fg3, c.none, no)
-Group.new('clojureAnonArg', c.yellow, c.none, no)
-Group.new('clojureVariable', c.blue0, c.none, no)
-Group.new('clojureMacro', c.orange0, c.none, no)
-Group.new('clojureMeta', c.yellow, c.none, no)
-Group.new('clojureDeref', c.yellow, c.none, no)
-Group.new('clojureQuote', c.yellow, c.none, no)
-Group.new('clojureUnquote', c.yellow, c.none, no)
+
 -- CSS
 Group.new('cssBraces', c.blue0, c.none, no)
 Group.new('cssFunctionName', c.yellow, c.none, no)
@@ -314,11 +171,7 @@ Group.new('cssDimensionProp', c.aqua0, c.none, no)
 Group.new('cssRenderProp', c.aqua0, c.none, no)
 Group.new('cssColorProp', c.aqua0, c.none, no)
 Group.new('cssGeneratedContentProp', c.aqua0, c.none, no)
--- DTD
-Group.new('dtdFunction', c.grey, c.none, no)
-Group.new('dtdTagName', c.purple0, c.none, no)
-Group.new('dtdParamEntityPunct', c.grey, c.none, no)
-Group.new('dtdParamEntityDPunct', c.grey, c.none, no)
+
 -- Diff
 Group.new('diffAdded', c.green, c.none, no)
 Group.new('diffRemoved', c.red, c.none, no)
@@ -326,39 +179,7 @@ Group.new('diffChanged', c.aqua0, c.none, no)
 Group.new('diffFile', c.orange0, c.none, no)
 Group.new('diffNewFile', c.yellow, c.none, no)
 Group.new('diffLine', c.blue0, c.none, no)
--- Elixir
-Group.new('elixirDocString', g.Comment, g.Comment, g.Comment)
-Group.new('elixirStringDelimiter', c.green, c.none, no)
-Group.new('elixirInterpolationDelimiter', c.aqua0, c.none, no)
-Group.new('elixirModuleDeclaration', c.yellow, c.none, no)
--- Go
-Group.new('goDirective', c.aqua0, c.none, no)
-Group.new('goConstants', c.purple0, c.none, no)
-Group.new('goDeclaration', g.Keyword, g.Keyword, g.Keyword)
-Group.new('goDeclType', c.blue0, c.none, no)
-Group.new('goBuiltins', c.orange0, c.none, no)
--- Haskell
-Group.new('haskellType', c.fg1, c.none, no)
-Group.new('haskellIdentifier', c.fg1, c.none, no)
-Group.new('haskellSeparator', c.fg1, c.none, no)
-Group.new('haskellDelimiter', c.fg4, c.none, no)
-Group.new('haskellOperators', c.blue0, c.none, no)
-Group.new('haskellBacktick', c.orange0, c.none, no)
-Group.new('haskellStatement', c.orange0, c.none, no)
-Group.new('haskellConditional', c.orange0, c.none, no)
-Group.new('haskellLet', c.aqua0, c.none, no)
-Group.new('haskellDefault', c.aqua0, c.none, no)
-Group.new('haskellWhere', c.aqua0, c.none, no)
-Group.new('haskellBottom', c.aqua0, c.none, no)
-Group.new('haskellBlockKeywords', c.aqua0, c.none, no)
-Group.new('haskellImportKeywords', c.aqua0, c.none, no)
-Group.new('haskellDeclKeyword', c.aqua0, c.none, no)
-Group.new('haskellDeriving', c.aqua0, c.none, no)
-Group.new('haskellAssocType', c.aqua0, c.none, no)
-Group.new('haskellNumber', c.purple0, c.none, no)
-Group.new('haskellPragma', c.purple0, c.none, no)
-Group.new('haskellString', c.green, c.none, no)
-Group.new('haskellChar', c.green, c.none, no)
+
 -- HTML (keep consistent with Markdown, below)
 Group.new('htmlTag', c.blue0, c.none, no)
 Group.new('htmlEndTag', c.blue0, c.none, no)
@@ -382,18 +203,7 @@ Group.new('htmlH3', c.green, c.none, b)
 Group.new('htmlH4', c.yellow, c.none, b)
 Group.new('htmlH5', c.yellow, c.none, no)
 Group.new('htmlH6', c.yellow, c.none, no)
--- Java
-Group.new('javaAnnotation', c.blue0, c.none, no)
-Group.new('javaDocTags', c.aqua0, c.none, no)
-Group.new('javaCommentTitle', g.vimCommentTitle, g.vimCommentTitle, g.vimCommentTitle)
-Group.new('javaParen', c.fg3, c.none, no)
-Group.new('javaParen1', c.fg3, c.none, no)
-Group.new('javaParen2', c.fg3, c.none, no)
-Group.new('javaParen3', c.fg3, c.none, no)
-Group.new('javaParen4', c.fg3, c.none, no)
-Group.new('javaParen5', c.fg3, c.none, no)
-Group.new('javaOperator', c.orange0, c.none, no)
-Group.new('javaVarArg', c.green, c.none, no)
+
 -- JavaScript
 Group.new('javaScriptBraces', c.fg1, c.none, no)
 Group.new('javaScriptFunction', c.aqua0, c.none, no)
@@ -485,15 +295,18 @@ Group.new('jsFutureKeys', c.orange0, c.none, b)
 Group.new('jsFuncArgs', c.blue0, c.none, no)
 Group.new('jsStorageClass', c.blue0, c.none, no)
 Group.new('jsxRegion', c.blue0, c.none, no)
+
 -- JSON
 Group.new('jsonKeyword', c.green, c.none, no)
 Group.new('jsonQuote', c.green, c.none, no)
 Group.new('jsonBraces', c.fg1, c.none, no)
 Group.new('jsonString', c.fg1, c.none, no)
+
 -- Lua
 Group.new('luaIn', c.red1, c.none, no)
 Group.new('luaFunction', c.aqua0, c.none, no)
 Group.new('luaTable', c.orange0, c.none, no)
+
 -- Markdown (keep consistent with HTML, above
 Group.new('markdownItalic', c.fg3, c.none, i)
 Group.new('markdownH1', g.htmlH1, g.htmlH1, g.htmlH1)
@@ -520,52 +333,13 @@ Group.new('markdownUrl', c.purple0, c.none, no)
 Group.new('markdownUrlTitleDelimiter', c.green, c.none, no)
 Group.new('markdownLinkText', g.htmlLink, g.htmlLink, g.htmlLink)
 Group.new('markdownIdDeclaration', g.markdownLinkText, g.markdownLinkText, g.markdownLinkText)
+
 -- MoonScript
 Group.new('moonSpecialOp', c.fg3, c.none, no)
 Group.new('moonExtendedOp', c.fg3, c.none, no)
 Group.new('moonFunction', c.fg3, c.none, no)
 Group.new('moonObject', c.yellow, c.none, no)
--- Objective-C
-Group.new('objcTypeModifier', c.red, c.none, no)
-Group.new('objcDirective', c.blue0, c.none, no)
--- PureScript
-Group.new('purescriptModuleKeyword', c.aqua0, c.none, no)
-Group.new('purescriptModuleName', c.red1, c.none, b)
-Group.new('purescriptWhere', c.aqua0, c.none, no)
-Group.new('purescriptDelimiter', c.fg4, c.none, no)
-Group.new('purescriptType', g.Type, g.Type, g.Type)
-Group.new('purescriptImportKeyword', g.Keyword, g.Keyword, g.Keyword)
-Group.new('purescriptHidingKeyword', g.Keyword, g.Keyword, g.Keyword)
-Group.new('purescriptAsKeyword', g.Keyword, g.Keyword, g.Keyword)
-Group.new('purescriptStructure', g.Structure, g.Structure, g.Structure)
-Group.new('purescriptOperator', g.Operator, g.Operator, g.Operator)
-Group.new('purescriptTypeVar', g.Type, g.Type, g.Type)
-Group.new('purescriptConstructor', g.Function, g.Function, g.Function)
-Group.new('purescriptFunction', g.Function, g.Function, g.Function)
-Group.new('purescriptConditional', g.Conditional, g.Conditional, g.Conditional)
-Group.new('purescriptBacktick', c.orange0, c.none, no)
--- Python
-Group.new('pythonCoding', g.Comment, g.Comment, g.Comment)
--- Ruby
-Group.new('rubyStringDelimiter', c.green, c.none, no)
-Group.new('rubyInterpolationDelimiter', c.aqua0, c.none, no)
--- Rust
-Group.new('rustSelf', c.blue0, c.none, b)
-Group.new('rustPanic', c.red1, c.none, b)
-Group.new('rustAssert', c.blue1, c.none, b)
--- Scala
-Group.new('scalaNameDefinition', c.fg1, c.none, no)
-Group.new('scalaCaseFollowing', c.fg1, c.none, no)
-Group.new('scalaCapitalWord', c.fg1, c.none, no)
-Group.new('scalaTypeExtension', c.fg1, c.none, no)
-Group.new('scalaKeyword', c.red1, c.none, b)
-Group.new('scalaKeywordModifier', c.red1, c.none, no)
-Group.new('scalaSpecial', c.aqua0, c.none, no)
-Group.new('scalaOperator', c.fg1, c.none, no)
-Group.new('scalaTypeDeclaration', c.yellow, c.none, no)
-Group.new('scalaTypeTypePostDeclaration', c.yellow, c.none, no)
-Group.new('scalaInstanceDeclaration', c.fg1, c.none, no)
-Group.new('scalaInterpolation', c.aqua0, c.none, no)
+
 -- TypeScript
 Group.new('typeScriptReserved', c.aqua0, c.none, no)
 Group.new('typeScriptLabel', g.Label, g.Label, g.Label)
@@ -585,6 +359,7 @@ Group.new('typeScriptOpSymbols', g.Operator, g.Operator, g.Operator)
 Group.new('typeScriptHtmlElemProperties', g.Special, g.Special, g.Special)
 Group.new('typeScriptNull', c.purple0, c.none, b)
 Group.new('typeScriptInterpolationDelimiter', c.aqua0, c.none, no)
+
 -- XML
 Group.new('xmlTag', c.blue0, c.none, no)
 Group.new('xmlEndTag', c.blue0, c.none, no)
@@ -600,6 +375,7 @@ Group.new('xmlProcessingDelim', c.grey, c.none, no)
 Group.new('xmlAttribPunct', c.grey, c.none, no)
 Group.new('xmlEntity', c.orange0, c.none, no)
 Group.new('xmlEntityPunct', c.orange0, c.none, no)
+
 -- Vim
 Group.new('vimCommentTitle', c.blue1, c.none, b)
 Group.new('vimNotation', c.orange0, c.none, no)
@@ -616,9 +392,7 @@ Group.new('vimSetSep', c.fg3, c.none, no)
 Group.new('vimSep', c.fg3, c.none, no)
 Group.new('vimContinue', c.yellow, c.none, no)
 
--------------------------
 -- Plugin Highlighting --
--------------------------
 
 -- ALE (dense-analysis/ale) 
 Group.new('ALEError', c.fg0, c.none, uc)
@@ -671,18 +445,7 @@ Group.new('IndentGuidesEven', c.none, c.bg1, r)
 -- Multi Cursors (mg979/vim-visual-multi)
 Group.new('multiple_cursors_cursor', c.fg0, c.none, r)
 Group.new('multiple_cursors_visual', c.fg0, c.bg2, no)
--- NerdTree (preservim/nerdtree)
-Group.new('NERDTreeDir', c.blue0, c.none, b)
-Group.new('NERDTreeDirSlash', c.blue0, c.none, no)
-Group.new('NERDTreeOpenable', c.blue0, c.none, no)
-Group.new('NERDTreeClosable', c.blue0, c.none, no)
-Group.new('NERDTreeFile', c.fg1, c.none, no)
-Group.new('NERDTreeExecFile', c.yellow, c.none, no)
-Group.new('NERDTreeUp', c.red1, c.none, no)
-Group.new('NERDTreeCWD', c.purple0, c.none, no)
-Group.new('NERDTreeHelp', c.fg1, c.none, no)
-Group.new('NERDTreeToggleOn', c.green, c.none, no)
-Group.new('NERDTreeToggleOff', c.red, c.none, no)
+
 -- Netrw (vim builtin)
 Group.new('netrwDir', c.blue0, c.none, no)
 Group.new('netrwClassify', c.blue0, c.none, no)

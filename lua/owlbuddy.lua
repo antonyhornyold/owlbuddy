@@ -60,7 +60,7 @@ Color.new('no_dk_red',      '#d3423e')
 
 ---- Syntax Groups (descriptions and ordering from `:h w18`) --
 
---Group.new('Comment') -- any comment
+Group.new('Comment', no_comment_fg) -- any comment
 --Group.new('Constant') -- any constant
 --Group.new('String') -- this is a string
 --Group.new('Character') -- a character constant: 'c', '\n'
@@ -97,7 +97,7 @@ Color.new('no_dk_red',      '#d3423e')
 
 ---- Highlighting Groups (descriptions and ordering from `:h highlight-groups`) --
 
---Group.new('ColorColumn') --  used for the columns set with 'colorcolumn'
+Group.new('ColorColumn', none, no_04) --  used for the columns set with 'colorcolumn'
 --Group.new('Conceal') -- placeholder characters substituted for concealed text (see 'conceallevel')
 --Group.new('Cursor') -- the character under the cursor
 --Group.new('CursorIM') -- like Cursor, but used when in IME mode

@@ -60,7 +60,7 @@ Color.new('no_dk_red',      '#d3423e')
 
 ---- Syntax Groups (descriptions and ordering from `:h w18`) --
 
-Group.new('Comment', no_comment_two) -- any comment
+Group.new('Comment', no_comment_two, c.none, no) -- any comment
 --Group.new('Constant') -- any constant
 --Group.new('String') -- this is a string
 --Group.new('Character') -- a character constant: 'c', '\n'
@@ -97,7 +97,7 @@ Group.new('Comment', no_comment_two) -- any comment
 
 ---- Highlighting Groups (descriptions and ordering from `:h highlight-groups`) --
 
-Group.new('ColorColumn', none, no_02) --  used for the columns set with 'colorcolumn'
+Group.new('ColorColumn', c.none, c.no_02, no) --  used for the columns set with 'colorcolumn'
 --Group.new('Conceal') -- placeholder characters substituted for concealed text (see 'conceallevel')
 --Group.new('Cursor') -- the character under the cursor
 --Group.new('CursorIM') -- like Cursor, but used when in IME mode
@@ -111,15 +111,15 @@ Group.new('ColorColumn', none, no_02) --  used for the columns set with 'colorco
 --Group.new('VertSplit') -- the column separating verti-- cally split windows
 --Group.new('Folded') -- line used for closed folds
 --Group.new('FoldColumn') -- 'foldcolumn'
-Group.new('SignColumn', NONE, no_red) -- column where signs are displayed
+Group.new('SignColumn', c.none, c.no_red, no) -- column where signs are displayed
 --Group.new('IncSearch') -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-Group.new('LineNr', no_comment_one, no_01, NONE) -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+Group.new('LineNr', c.no_comment_one, c.no_01, no) -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 --Group.new('CursorLineNr') -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 --Group.new('MatchParen') -- The character under the cursor or just before it, if it is a paired bracket, and its match.
 --Group.new('ModeMsg') -- 'showmode' message (e.g., "-- INSERT --")
 --Group.new('MoreMsg') -- more-prompt
 --Group.new('NonText') -- '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
-Group.new('Normal', no_fg, no_bg) -- normal text
+Group.new('Normal', c.no_fg, c.no_bg, no) -- normal text
 --Group.new('Pmenu') -- Popup menu: normal item.
 --Group.new('PmenuSel') -- Popup menu: selected item.
 --Group.new('PmenuSbar') -- Popup menu: scrollbar.
@@ -148,8 +148,8 @@ Group.new('Normal', no_fg, no_bg) -- normal text
 
 ---- Miscellaneous Highlighting --
 
-Group.new('CursorColumn', none, no_02)
-Group.new('CursorLine', none, no_02)
+Group.new('CursorColumn', c.none, c.no_02, no)
+Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('ToolbarLine')
 --Group.new('ToolbarButton')
 --Group.new('NormalMode')

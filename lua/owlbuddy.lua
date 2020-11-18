@@ -119,7 +119,7 @@ Color.new('no_dk_red',      '#d3423e')
 --Group.new('ModeMsg') -- 'showmode' message (e.g., "-- INSERT --")
 --Group.new('MoreMsg') -- more-prompt
 --Group.new('NonText') -- '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
---Group.new('Normal') -- normal text
+Group.new('Normal', no_fg, no_bg) -- normal text
 --Group.new('Pmenu') -- Popup menu: normal item.
 --Group.new('PmenuSel') -- Popup menu: selected item.
 --Group.new('PmenuSbar') -- Popup menu: scrollbar.

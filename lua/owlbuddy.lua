@@ -21,11 +21,8 @@ local v = vim.g
 
 v.colors_name = 'owlbuddy'
 
--- require("colorbuddy").setup()
+-- COLOURS --
 
----- COLOURS --
-
---Color.new('colourName', "#colour")
 Color.new('no_fg',          '#d6deeb')
 Color.new('no_bg',          '#011627')
 Color.new('no_comment_one', '#0d4572')
@@ -56,9 +53,24 @@ Color.new('no_dk_red',      '#d3423e')
 
 -- TERMINAL COLOURS --
 
--- v.terminal_color_1 = '#colour'
+v.terminal_color_0  = '#colour'
+v.terminal_color_1  = '#colour'
+v.terminal_color_2  = '#colour'
+v.terminal_color_3  = '#colour'
+v.terminal_color_4  = '#colour'
+v.terminal_color_5  = '#colour'
+v.terminal_color_6  = '#colour'
+v.terminal_color_7  = '#colour'
+v.terminal_color_8  = '#colour'
+v.terminal_color_9  = '#colour'
+v.terminal_color_10 = '#colour'
+v.terminal_color_11 = '#colour'
+v.terminal_color_12 = '#colour'
+v.terminal_color_13 = '#colour'
+v.terminal_color_14 = '#colour'
+v.terminal_color_15 = '#colour'
 
--- Syntax Groups (descriptions and ordering from `:h w18`) --
+-- SYNTAX GROUPS --
 
 Group.new('Comment', c.no_comment_two, c.none, i) -- any comment
 --Group.new('Constant') -- any constant
@@ -97,7 +109,7 @@ Group.new('Comment', c.no_comment_two, c.none, i) -- any comment
 
 ---- Highlighting Groups (descriptions and ordering from `:h highlight-groups`) --
 
-Group.new('ColorColumn', c.none, c.no_02, no) --  used for the columns set with 'colorcolumn'
+Group.new('ColorColumn', c.none, c.no_03, no) --  used for the columns set with 'colorcolumn'
 --Group.new('Conceal') -- placeholder characters substituted for concealed text (see 'conceallevel')
 --Group.new('Cursor') -- the character under the cursor
 --Group.new('CursorIM') -- like Cursor, but used when in IME mode
@@ -111,9 +123,9 @@ Group.new('ColorColumn', c.none, c.no_02, no) --  used for the columns set with 
 --Group.new('VertSplit') -- the column separating verti-- cally split windows
 --Group.new('Folded') -- line used for closed folds
 --Group.new('FoldColumn') -- 'foldcolumn'
-Group.new('SignColumn', c.none, c.no_06, no) -- column where signs are displayed
+Group.new('SignColumn', c.none, c.no_bg, no) -- column where signs are displayed
 --Group.new('IncSearch') -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-Group.new('LineNr', c.no_comment_one, c.no_01, no) -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+Group.new('LineNr', c.no_comment_one, c.no_03, no) -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 Group.new('CursorLineNr', c.no_lt_fg, c.none, b) -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 --Group.new('MatchParen') -- The character under the cursor or just before it, if it is a paired bracket, and its match.
 --Group.new('ModeMsg') -- 'showmode' message (e.g., "-- INSERT --")

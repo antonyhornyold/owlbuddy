@@ -54,13 +54,13 @@ Color.new('no_br_green',    '#c5e478')
 Color.new('no_br_red',      '#ff2c83')
 Color.new('no_dk_red',      '#d3423e')
 
----- TERMINAL COLOURS --
+-- TERMINAL COLOURS --
 
----- v.terminal_color_1 = '#colour'
+-- v.terminal_color_1 = '#colour'
 
----- Syntax Groups (descriptions and ordering from `:h w18`) --
+-- Syntax Groups (descriptions and ordering from `:h w18`) --
 
-Group.new('Comment', c.no_comment_two, c.none, no) -- any comment
+Group.new('Comment', c.no_comment_two, c.none, i) -- any comment
 --Group.new('Constant') -- any constant
 --Group.new('String') -- this is a string
 --Group.new('Character') -- a character constant: 'c', '\n'
@@ -111,10 +111,10 @@ Group.new('ColorColumn', c.none, c.no_02, no) --  used for the columns set with 
 --Group.new('VertSplit') -- the column separating verti-- cally split windows
 --Group.new('Folded') -- line used for closed folds
 --Group.new('FoldColumn') -- 'foldcolumn'
-Group.new('SignColumn', c.none, c.no_red, no) -- column where signs are displayed
+Group.new('SignColumn', c.none, c.no_06, no) -- column where signs are displayed
 --Group.new('IncSearch') -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 Group.new('LineNr', c.no_comment_one, c.no_01, no) -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
---Group.new('CursorLineNr') -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+Group.new('CursorLineNr', c.no_lt_fg, c.none, b) -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 --Group.new('MatchParen') -- The character under the cursor or just before it, if it is a paired bracket, and its match.
 --Group.new('ModeMsg') -- 'showmode' message (e.g., "-- INSERT --")
 --Group.new('MoreMsg') -- more-prompt

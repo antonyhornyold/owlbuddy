@@ -53,22 +53,22 @@ Color.new('no_dk_red',      '#d3423e')
 
 -- TERMINAL COLOURS --
 
-v.terminal_color_0  = '#colour'
-v.terminal_color_1  = '#colour'
-v.terminal_color_2  = '#colour'
-v.terminal_color_3  = '#colour'
-v.terminal_color_4  = '#colour'
-v.terminal_color_5  = '#colour'
-v.terminal_color_6  = '#colour'
-v.terminal_color_7  = '#colour'
-v.terminal_color_8  = '#colour'
-v.terminal_color_9  = '#colour'
-v.terminal_color_10 = '#colour'
-v.terminal_color_11 = '#colour'
-v.terminal_color_12 = '#colour'
-v.terminal_color_13 = '#colour'
-v.terminal_color_14 = '#colour'
-v.terminal_color_15 = '#colour'
+-- v.terminal_color_0  = '#colour'
+-- v.terminal_color_1  = '#colour'
+-- v.terminal_color_2  = '#colour'
+-- v.terminal_color_3  = '#colour'
+-- v.terminal_color_4  = '#colour'
+-- v.terminal_color_5  = '#colour'
+-- v.terminal_color_6  = '#colour'
+-- v.terminal_color_7  = '#colour'
+-- v.terminal_color_8  = '#colour'
+-- v.terminal_color_9  = '#colour'
+-- v.terminal_color_10 = '#colour'
+-- v.terminal_color_11 = '#colour'
+-- v.terminal_color_12 = '#colour'
+-- v.terminal_color_13 = '#colour'
+-- v.terminal_color_14 = '#colour'
+-- v.terminal_color_15 = '#colour'
 
 -- SYNTAX GROUPS --
 
@@ -107,7 +107,7 @@ Group.new('Comment', c.no_comment_two, c.none, i) -- any comment
 --Group.new('Error') -- any erroneous construct
 --Group.new('Todo') -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
----- Highlighting Groups (descriptions and ordering from `:h highlight-groups`) --
+-- HIGHLIGHTING GROUP --
 
 Group.new('ColorColumn', c.none, c.no_03, no) --  used for the columns set with 'colorcolumn'
 --Group.new('Conceal') -- placeholder characters substituted for concealed text (see 'conceallevel')
@@ -158,10 +158,10 @@ Group.new('Normal', c.no_fg, c.no_bg, no) -- normal text
 --Group.new('WarningMsg') --  warning messages
 --Group.new('WildMenu') --  current match in 'wildmenu' completion
 
----- Miscellaneous Highlighting --
+-- MISCELLANEOUS HIGHLIGHTING --
 
-Group.new('CursorColumn', c.none, c.no_02, no)
-Group.new('CursorLine', c.none, c.no_02, no)
+Group.new('CursorColumn', c.none, c.no_03, no)
+Group.new('CursorLine', c.none, c.no_03, no)
 --Group.new('ToolbarLine')
 --Group.new('ToolbarButton')
 --Group.new('NormalMode')
@@ -171,16 +171,18 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('CommandMode')
 --Group.new('Warnings')
 
----- Language-Specific Highlighting --
+-- LANGUAGE-SPECIFIC HIGHLIGHTING --
 
----- CoffeeScript
+-- CoffeeScript --
+
 --Group.new('coffeeExtendedOp')
 --Group.new('coffeeSpecialOp')
 --Group.new('coffeeCurly')
 --Group.new('coffeeParen')
 --Group.new('coffeeBracket')
 
----- CSS
+-- css --
+
 --Group.new('cssBraces')
 --Group.new('cssFunctionName')
 --Group.new('cssIdentifier')
@@ -212,7 +214,8 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('cssColorProp')
 --Group.new('cssGeneratedContentProp')
 
----- Diff
+-- Diff --
+
 --Group.new('diffAdded')
 --Group.new('diffRemoved')
 --Group.new('diffChanged')
@@ -220,7 +223,8 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('diffNewFile')
 --Group.new('diffLine')
 
----- HTML (keep consistent with Markdown, below)
+-- HTML (keep consistent with Markdown, below) --
+
 --Group.new('htmlTag')
 --Group.new('htmlEndTag')
 --Group.new('htmlTagName')
@@ -244,7 +248,8 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('htmlH5')
 --Group.new('htmlH6')
 
----- JavaScript
+-- JavaScript --
+
 --Group.new('javaScriptBraces')
 --Group.new('javaScriptFunction')
 --Group.new('javaScriptIdentifier')
@@ -336,18 +341,21 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('jsStorageClass')
 --Group.new('jsxRegion')
 
----- JSON
+-- JSON --
+
 --Group.new('jsonKeyword')
 --Group.new('jsonQuote')
 --Group.new('jsonBraces')
 --Group.new('jsonString')
 
----- Lua
+-- Lua --
+
 --Group.new('luaIn')
 --Group.new('luaFunction')
 --Group.new('luaTable')
 
----- Markdown (keep consistent with HTML, above
+-- Markdown (keep consistent with HTML, above) --
+
 --Group.new('markdownItalic')
 --Group.new('markdownH1')
 --Group.new('markdownH2')
@@ -374,13 +382,15 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('markdownLinkText')
 --Group.new('markdownIdDeclaration')
 
----- MoonScript
+-- MoonScript --
+
 --Group.new('moonSpecialOp')
 --Group.new('moonExtendedOp')
 --Group.new('moonFunction')
 --Group.new('moonObject')
 
----- TypeScript
+-- TypeScript --
+
 --Group.new('typeScriptReserved')
 --Group.new('typeScriptLabel')
 --Group.new('typeScriptFuncKeyword')
@@ -400,7 +410,8 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('typeScriptNull')
 --Group.new('typeScriptInterpolationDelimiter')
 
----- XML
+-- XML --
+
 --Group.new('xmlTag')
 --Group.new('xmlEndTag')
 --Group.new('xmlTagName')
@@ -416,7 +427,8 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('xmlEntity')
 --Group.new('xmlEntityPunct')
 
----- Vim
+-- Vim --
+
 --Group.new('vimCommentTitle')
 --Group.new('vimNotation')
 --Group.new('vimBracket')
@@ -432,7 +444,7 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('vimSep')
 --Group.new('vimContinue')
 
----- Plugin Highlighting --
+-- PLUGIN HIGHLIGHTING --
 
 ---- ALE (dense-analysis/ale) 
 --Group.new('ALEError')
@@ -441,13 +453,16 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('ALEErrorSign')
 --Group.new('ALEWarningSign')
 --Group.new('ALEInfoSign')
----- Buftabline (ap/vim-buftabline)
+
+--Buftabline (ap/vim-buftabline)
 --Group.new('BufTabLineCurrent')
 --Group.new('BufTabLineActive')
 --Group.new('BufTabLineHidden')
 --Group.new('BufTabLineFill')
+
 ---- Crates (mhinz/vim-crates)
 --Group.new('Crate')
+
 ---- CTRL P (ctrlpvim/ctrlp.vim)
 --Group.new('CtrlPMatch')
 --Group.new('CtrlPNoEntries')
@@ -457,31 +472,39 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('CtrlPMode1')
 --Group.new('CtrlPMode2')
 --Group.new('CtrlPStats')
+
 ---- Current Word (dominikduda/vim_current_word)
 --Group.new('CurrentWord')
 --Group.new('CurrentWordTwins')
+
 ---- Dirvish (justinmk/vim-dirvish)
 --Group.new('DirvishPathTail')
 --Group.new('DirvishArg')
+
 ---- Easy Motion (easymotion/vim-easymotion)
 --Group.new('EasyMotionTarget')
 --Group.new('EasyMotionShade')
+
 ---- Git Commit (tpope/vim-git)
 --Group.new('gitcommitSelectedFile')
 --Group.new('gitcommitDiscardedFile')
+
 ---- Gitgutter (airblade/vim-gitgutter)
 --Group.new('GitGutterAdd')
 --Group.new('GitGutterChange')
 --Group.new('GitGutterDelete')
 --Group.new('GitGutterChangeDelete')
+
 ---- Git Messenger (rhysd/git-messenger.vim)
 --Group.new('gitmessengerPopupNormal') -- Normal color in popup window
 --Group.new('gitmessengerHeader') -- Header such as 'Commit:', 'Author:'
 --Group.new('gitmessengerHash') -- Commit hash at 'Commit:' header
 --Group.new('gitmessengerHistory') -- History number at 'History:' header    
+
 ---- Indent Guide (nathanaelkane/vim-indent-guides)
 --Group.new('IndentGuidesOdd')
 --Group.new('IndentGuidesEven')
+
 ---- Multi Cursors (mg979/vim-visual-multi)
 --Group.new('multiple_cursors_cursor')
 --Group.new('multiple_cursors_visual')
@@ -497,18 +520,22 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('netrwHelpCmd')
 --Group.new('netrwCmdSep')
 --Group.new('netrwVersion')
+
 ---- Show Marks (jacquesbh/vim-showmarks) -- Created by Andreas Politz
 --Group.new('ShowMarksHLl')
 --Group.new('ShowMarksHLu')
 --Group.new('ShowMarksHLo')
 --Group.new('ShowMarksHLm')
+
 ---- Signature (kshenoy/vim-signature)
 --Group.new('SignatureMarkText')
 --Group.new('SignatureMarkerText')
+
 ---- Signify (mhinz/vim-signify)
 --Group.new('SignifySignAdd')
 --Group.new('SignifySignChange')
 --Group.new('SignifySignDelete')
+
 ---- Startify (mhinz/vim-startify)
 --Group.new('StartifyBracket')
 --Group.new('StartifyFile')
@@ -519,20 +546,20 @@ Group.new('CursorLine', c.none, c.no_02, no)
 --Group.new('StartifySpecial')
 --Group.new('StartifyHeader')
 --Group.new('StartifyFooter')
+
 ---- Syntastic (vim-syntastic/syntastic)
 --Group.new('SyntasticError')
 --Group.new('SyntasticWarning')
 --Group.new('SyntasticErrorSign')
 --Group.new('SyntasticWarningSign')
+
 ---- Which Key (liuchengxu/vim-which-key)
 --Group.new('WhichKey')
 --Group.new('WhichKeySeperator')
 --Group.new('WhichKeyGroup')
 --Group.new('WhichKeyDesc')
 
------------------------
----- Neovim Builtins --
------------------------
+-- NEOVIM BUILTINS --
 
 ---- +- Neovim Support -+
 ---- Group.new("healthError",c.nord_11, c.nord_1)

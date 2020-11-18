@@ -111,9 +111,9 @@ Group.new('ColorColumn', none, no_02) --  used for the columns set with 'colorco
 --Group.new('VertSplit') -- the column separating verti-- cally split windows
 --Group.new('Folded') -- line used for closed folds
 --Group.new('FoldColumn') -- 'foldcolumn'
-Group.new('SignColumn', none, no_red) -- column where signs are displayed
+Group.new('SignColumn', NONE, no_red) -- column where signs are displayed
 --Group.new('IncSearch') -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
---Group.new('LineNr') -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+Group.new('LineNr', no_comment_one, no_01, NONE) -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 --Group.new('CursorLineNr') -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 --Group.new('MatchParen') -- The character under the cursor or just before it, if it is a paired bracket, and its match.
 --Group.new('ModeMsg') -- 'showmode' message (e.g., "-- INSERT --")

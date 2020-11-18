@@ -60,7 +60,7 @@ Color.new('no_dk_red',      '#d3423e')
 
 ---- Syntax Groups (descriptions and ordering from `:h w18`) --
 
-Group.new('Comment', no_comment_fg) -- any comment
+Group.new('Comment', no_comment_two) -- any comment
 --Group.new('Constant') -- any constant
 --Group.new('String') -- this is a string
 --Group.new('Character') -- a character constant: 'c', '\n'

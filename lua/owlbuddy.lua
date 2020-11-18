@@ -3,25 +3,25 @@
 -- Author:       Antony Hornyold
 -- Website:      https://github.com/antonyhornyold/owlbuddy
 
---local Color, colors, Group, groups, styles = require("colorbuddy").setup()
---local Color = require('colorbuddy.color').Color
---local Group = require('colorbuddy.group').Group
---local g = require('colorbuddy.group').groups
---local c = require('colorbuddy.color').colors
---local s = require('colorbuddy.style').styles
---local b = s.bold
---local i = s.italic
---local n = s.inverse
---local uc = s.undercurl
---local ul = s.underline
---local r = s.reverse
---local sto = s.standout
---local no = s.NONE
---local v = vim.g
+local Color, colors, Group, groups, styles = require("colorbuddy").setup()
+local Color = require('colorbuddy.color').Color
+local Group = require('colorbuddy.group').Group
+local g = require('colorbuddy.group').groups
+local c = require('colorbuddy.color').colors
+local s = require('colorbuddy.style').styles
+local b = s.bold
+local i = s.italic
+local n = s.inverse
+local uc = s.undercurl
+local ul = s.underline
+local r = s.reverse
+local sto = s.standout
+local no = s.NONE
+local v = vim.g
 
---v.colors_name = 'owlbuddy'
+v.colors_name = 'owlbuddy'
 
-require("colorbuddy").setup()
+-- require("colorbuddy").setup()
 
 ---- COLOURS --
 

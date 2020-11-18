@@ -97,7 +97,7 @@ Group.new('Comment', no_comment_fg) -- any comment
 
 ---- Highlighting Groups (descriptions and ordering from `:h highlight-groups`) --
 
-Group.new('ColorColumn', none, no_04) --  used for the columns set with 'colorcolumn'
+Group.new('ColorColumn', none, no_02) --  used for the columns set with 'colorcolumn'
 --Group.new('Conceal') -- placeholder characters substituted for concealed text (see 'conceallevel')
 --Group.new('Cursor') -- the character under the cursor
 --Group.new('CursorIM') -- like Cursor, but used when in IME mode
@@ -111,7 +111,7 @@ Group.new('ColorColumn', none, no_04) --  used for the columns set with 'colorco
 --Group.new('VertSplit') -- the column separating verti-- cally split windows
 --Group.new('Folded') -- line used for closed folds
 --Group.new('FoldColumn') -- 'foldcolumn'
---Group.new('SignColumn') -- column where signs are displayed
+Group.new('SignColumn', none, no_red) -- column where signs are displayed
 --Group.new('IncSearch') -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 --Group.new('LineNr') -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 --Group.new('CursorLineNr') -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
@@ -148,8 +148,8 @@ Group.new('Normal', no_fg, no_bg) -- normal text
 
 ---- Miscellaneous Highlighting --
 
---Group.new('CursorColumn')
---Group.new('CursorLine')
+Group.new('CursorColumn', none, no_02)
+Group.new('CursorLine', none, no_02)
 --Group.new('ToolbarLine')
 --Group.new('ToolbarButton')
 --Group.new('NormalMode')

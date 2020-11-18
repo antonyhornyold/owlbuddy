@@ -120,7 +120,7 @@ Group.new('ColorColumn', c.none, c.no_03, no) --  used for the columns set with 
 --Group.new('DiffText') -- diff mode: Changed text within a changed line
 --Group.new('EndOfBuffer') -- filler lines (~) after the last line in the buffer
 --Group.new('ErrorMsg') -- error messages on the command line
---Group.new('VertSplit') -- the column separating verti-- cally split windows
+Group.new('VertSplit', c.no_bg, c.no_bg, no) -- the column separating verti-- cally split windows
 --Group.new('Folded') -- line used for closed folds
 --Group.new('FoldColumn') -- 'foldcolumn'
 Group.new('SignColumn', c.none, c.no_bg, no) -- column where signs are displayed

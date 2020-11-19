@@ -73,19 +73,19 @@ Color.new('no_dk_red',      '#d3423e')
 -- SYNTAX GROUPS --
 
 Group.new('Comment', c.no_comment_two, c.none, i) -- any comment
---Group.new('Constant') -- any constant
---Group.new('String') -- this is a string
---Group.new('Character') -- a character constant: 'c', '\n'
---Group.new('Boolean') -- a boolean constant: TRUE, false
---Group.new('Float') -- a floating point constant: 2.3e10
---Group.new('Identifier') -- any variable name
---Group.new('Function') -- function name (also: methods for classes)
---Group.new('Statement') -- any statement
---Group.new('Conditional') -- if, then, else, endif, switch, etc.
+Group.new('Constant', c.no_blue, c.none, no) -- any constant
+Group.new('String', c.no_yellow, c.none, no) -- this is a string
+Group.new('Character', c.no_yellow, c.none, no) -- a character constant: 'c', '\n'
+Group.new('Boolean', c.no_red, c.none, no) -- a boolean constant: TRUE, false
+Group.new('Float', c.no_orange, c.none, no) -- a floating point constant: 2.3e10
+Group.new('Identifier', c.no_cyan, c.none, no) -- any variable name
+Group.new('Function', c.no_purple, c.none, b) -- function name (also: methods for classes)
+Group.new('Statement', c.no_blue, c.none, no) -- any statement
+Group.new('Conditional', c.no_purple, c.none, no) -- if, then, else, endif, switch, etc.
 --Group.new('Repeat') -- for, do, while, etc.
 --Group.new('Label') -- case, default, etc.
---Group.new('Operator') -- sizeof", "+", "*", etc.
---Group.new('Keyword') -- any other keyword
+Group.new('Operator', c.no_purple, c.none, no) -- sizeof", "+", "*", etc.
+Group.new('Keyword', c.no_pink, c.none, b) -- any other keyword
 --Group.new('Exception') -- try, catch, throw
 --Group.new('PreProc') -- generic Preprocessor
 --Group.new('Include') -- preprocessor #include
@@ -104,8 +104,8 @@ Group.new('Comment', c.no_comment_two, c.none, i) -- any comment
 --Group.new('Debug') -- debugging statements
 --Group.new('Underlined') -- text that stands out, HTML links
 --Group.new('Ignore') -- left blank, hidden
---Group.new('Error') -- any erroneous construct
---Group.new('Todo') -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+Group.new('Error', c.no_lt_fg, c.no_br_red, b) -- any erroneous construct
+Group.new('Todo', c.no_fg, c.none, ul + b) -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 -- HIGHLIGHTING GROUP --
 

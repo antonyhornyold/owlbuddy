@@ -82,30 +82,30 @@ Group.new('Identifier', c.no_cyan, c.none, no) -- any variable name
 Group.new('Function', c.no_purple, c.none, b) -- function name (also: methods for classes)
 Group.new('Statement', c.no_blue, c.none, no) -- any statement
 Group.new('Conditional', c.no_purple, c.none, no) -- if, then, else, endif, switch, etc.
---Group.new('Repeat') -- for, do, while, etc.
---Group.new('Label') -- case, default, etc.
+Group.new('Repeat', c.no_green, c.none, no) -- for, do, while, etc.
+Group.new('Label', c.no_pink, c.none, no) -- case, default, etc.
 Group.new('Operator', c.no_purple, c.none, no) -- sizeof", "+", "*", etc.
 Group.new('Keyword', c.no_pink, c.none, b) -- any other keyword
 Group.new('Exception', c.no_green, c.none, no) -- try, catch, throw
 Group.new('PreProc', c.no_purple, c.none, no) -- generic Preprocessor
---Group.new('Include') -- preprocessor #include
---Group.new('Define') -- preprocessor #define
---Group.new('Macro') -- same as Define
---Group.new('PreCondit') -- preprocessor #if, #else, #endif, etc.
+Group.new('Include', c.no_blue, c,none, no) -- preprocessor #include
+Group.new('Define', c.no_blue, c.none, b) -- preprocessor #define
+Group.new('Macro', c.no_blue, c.none, i) -- same as Define
+Group.new('PreCondit', c.no_green, c.none, no) -- preprocessor #if, #else, #endif, etc.
 --Group.new('Type') -- int, long, char, etc.
 Group.new('StorageClass', c.no_pink, c.none, no) -- static, register, volatile, etc.
---Group.new('Structure') -- struct, union, enum, etc.
---Group.new('Typedef') -- A typedef
+Group.new('Structure', c.no_pink, c.none, b) -- struct, union, enum, etc.
+Group.new('Typedef', c.no_pink, c.none, i) -- A typedef
 --Group.new('Special') -- any special symbol
 --Group.new('SpecialChar') -- special character in a constant
 --Group.new('Tag') -- you can use CTRL-] on this
---Group.new('Delimiter') -- character that needs attention
+Group.new('Delimiter', c.no_cyan, c.none, no) -- character that needs attention
 Group.new('SpecialComment', c.no_comment_one, c.none, no) -- special things inside a comment
 --Group.new('Debug') -- debugging statements
 Group.new('Underlined', c.none, c.none, ul) -- text that stands out, HTML links
 Group.new('Ignore', c.no_bg, c.none, no) -- left blank, hidden
 Group.new('Error', c.no_lt_fg, c.no_br_red, b) -- any erroneous construct
-Group.new('Todo', c.no_06, c.no_01, ul + b) -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+Group.new('Todo', c.no_fg, c.no_01, ul + b) -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 -- HIGHLIGHTING GROUP --
 

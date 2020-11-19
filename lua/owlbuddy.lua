@@ -88,7 +88,7 @@ Group.new('Operator', c.no_purple, c.none, no) -- sizeof", "+", "*", etc.
 Group.new('Keyword', c.no_pink, c.none, b) -- any other keyword
 Group.new('Exception', c.no_green, c.none, no) -- try, catch, throw
 Group.new('PreProc', c.no_purple, c.none, no) -- generic Preprocessor
-Group.new('Include', c.no_blue, c,none, no) -- preprocessor #include
+Group.new('Include', c.no_blue, c.none, no) -- preprocessor #include
 Group.new('Define', c.no_blue, c.none, b) -- preprocessor #define
 Group.new('Macro', c.no_blue, c.none, i) -- same as Define
 Group.new('PreCondit', c.no_green, c.none, no) -- preprocessor #if, #else, #endif, etc.

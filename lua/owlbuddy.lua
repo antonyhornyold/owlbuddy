@@ -352,7 +352,7 @@ Group.new('CursorLine', c.none, c.no_03, no)
 
 Group.new('luaIn', c.no_yellow, c.none, no)
 Group.new('luaFunction', c.no_blue, c.none, no)
-Group.new('luaTable', co.no_pink, c.none, no)
+Group.new('luaTable', c.no_pink, c.none, no)
 
 -- Markdown (keep consistent with HTML, above) --
 

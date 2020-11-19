@@ -86,26 +86,26 @@ Group.new('Conditional', c.no_purple, c.none, no) -- if, then, else, endif, swit
 --Group.new('Label') -- case, default, etc.
 Group.new('Operator', c.no_purple, c.none, no) -- sizeof", "+", "*", etc.
 Group.new('Keyword', c.no_pink, c.none, b) -- any other keyword
---Group.new('Exception') -- try, catch, throw
---Group.new('PreProc') -- generic Preprocessor
+Group.new('Exception', c.no_green, c.none, no) -- try, catch, throw
+Group.new('PreProc', c.no_purple, c.none, no) -- generic Preprocessor
 --Group.new('Include') -- preprocessor #include
 --Group.new('Define') -- preprocessor #define
 --Group.new('Macro') -- same as Define
 --Group.new('PreCondit') -- preprocessor #if, #else, #endif, etc.
 --Group.new('Type') -- int, long, char, etc.
---Group.new('StorageClass') -- static, register, volatile, etc.
+Group.new('StorageClass', c.no_pink, c.none, no) -- static, register, volatile, etc.
 --Group.new('Structure') -- struct, union, enum, etc.
 --Group.new('Typedef') -- A typedef
 --Group.new('Special') -- any special symbol
 --Group.new('SpecialChar') -- special character in a constant
 --Group.new('Tag') -- you can use CTRL-] on this
 --Group.new('Delimiter') -- character that needs attention
---Group.new('SpecialComment') -- special things inside a comment
+Group.new('SpecialComment', c.no_comment_one, c.none, no) -- special things inside a comment
 --Group.new('Debug') -- debugging statements
---Group.new('Underlined') -- text that stands out, HTML links
---Group.new('Ignore') -- left blank, hidden
+Group.new('Underlined', c.none, c.none, ul) -- text that stands out, HTML links
+Group.new('Ignore', c.no_bg, c.none, no) -- left blank, hidden
 Group.new('Error', c.no_lt_fg, c.no_br_red, b) -- any erroneous construct
-Group.new('Todo', c.no_fg, c.none, ul + b) -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+Group.new('Todo', c.no_06, c.no_01, ul + b) -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 -- HIGHLIGHTING GROUP --
 
@@ -350,9 +350,9 @@ Group.new('CursorLine', c.none, c.no_03, no)
 
 -- Lua --
 
---Group.new('luaIn')
---Group.new('luaFunction')
---Group.new('luaTable')
+Group.new('luaIn', c.no_yellow, c.none, no)
+Group.new('luaFunction', c.no_blue, c.none, no)
+Group.new('luaTable', co.no_pink, c.none, no)
 
 -- Markdown (keep consistent with HTML, above) --
 

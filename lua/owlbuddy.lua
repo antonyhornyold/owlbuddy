@@ -53,22 +53,22 @@ Color.new('no_dk_red',      '#d3423e')
 
 -- TERMINAL COLOURS --
 
--- v.terminal_color_0  = '#colour'
--- v.terminal_color_1  = '#colour'
--- v.terminal_color_2  = '#colour'
--- v.terminal_color_3  = '#colour'
--- v.terminal_color_4  = '#colour'
--- v.terminal_color_5  = '#colour'
--- v.terminal_color_6  = '#colour'
--- v.terminal_color_7  = '#colour'
--- v.terminal_color_8  = '#colour'
--- v.terminal_color_9  = '#colour'
--- v.terminal_color_10 = '#colour'
--- v.terminal_color_11 = '#colour'
--- v.terminal_color_12 = '#colour'
--- v.terminal_color_13 = '#colour'
--- v.terminal_color_14 = '#colour'
--- v.terminal_color_15 = '#colour'
+v.terminal_color_0  = '#011627'
+v.terminal_color_1  = '#ff5874'
+v.terminal_color_2  = '#addb67'
+v.terminal_color_3  = '#f78c6c'
+v.terminal_color_4  = '#82aaff'
+v.terminal_color_5  = '#c792ea'
+v.terminal_color_6  = '#7fdbca'
+v.terminal_color_7  = '#0d4572'
+v.terminal_color_8  = '#315572'
+v.terminal_color_9  = '#ff2c83'
+v.terminal_color_10 = '#d9f5dd'
+v.terminal_color_11 = '#f78c6c'
+v.terminal_color_12 = '#82aaff'
+v.terminal_color_13 = '#ff869a'
+v.terminal_color_14 = '#7fdbca'
+v.terminal_color_15 = '#d6deeb'
 
 -- SYNTAX GROUPS --
 
@@ -110,15 +110,15 @@ Group.new('Todo', c.no_fg, c.no_01, ul + b) -- anything that needs extra attenti
 -- HIGHLIGHTING GROUP --
 
 Group.new('ColorColumn', c.none, c.no_03, no) --  used for the columns set with 'colorcolumn'
---Group.new('Conceal') -- placeholder characters substituted for concealed text (see 'conceallevel')
+Group.new('Conceal' c.no_bg, c.none, no) -- placeholder characters substituted for concealed text (see 'conceallevel')
 --Group.new('Cursor') -- the character under the cursor
 --Group.new('CursorIM') -- like Cursor, but used when in IME mode
---Group.new('Directory') -- directory names (and other special names in listings)
+Group.new('Directory' c.no_blue, c.none, b) -- directory names (and other special names in listings)
 --Group.new('DiffAdd') -- diff mode: Added line
 --Group.new('DiffChange') --  diff mode: Changed line
 --Group.new('DiffDelete') -- diff mode: Deleted line
 --Group.new('DiffText') -- diff mode: Changed text within a changed line
---Group.new('EndOfBuffer') -- filler lines (~) after the last line in the buffer
+Group.new('EndOfBuffer', c.no_bg, c.none, no) -- filler lines (~) after the last line in the buffer
 --Group.new('ErrorMsg') -- error messages on the command line
 Group.new('VertSplit', c.no_bg, c.no_bg, no) -- the column separating verti-- cally split windows
 --Group.new('Folded') -- line used for closed folds
@@ -132,26 +132,32 @@ Group.new('CursorLineNr', c.no_lt_fg, c.none, b) -- Like LineNr when 'cursorline
 --Group.new('MoreMsg') -- more-prompt
 --Group.new('NonText') -- '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
 Group.new('Normal', c.no_fg, c.no_bg, no) -- normal text
+
 --Group.new('Pmenu') -- Popup menu: normal item.
 --Group.new('PmenuSel') -- Popup menu: selected item.
 --Group.new('PmenuSbar') -- Popup menu: scrollbar.
 --Group.new('PmenuThumb') -- Popup menu: Thumb of the scrollbar.
+
 --Group.new('Question') -- hit-enter prompt and yes/no questions
 --Group.new('QuickFixLine') -- Current quickfix item in the quickfix window.
 --Group.new('qfLineNr')
 --Group.new('Search') -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
 --Group.new('SpecialKey') -- Meta and special keys listed with ":map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
+
 --Group.new('SpellBad') -- Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
 --Group.new('SpellCap') -- Word that should start with a capital. This will be combined with the highlighting used otherwise.
 --Group.new('SpellLocal') -- Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
 --Group.new('SpellRare') -- Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
+
 --Group.new('StatusLine') -- status line of current window
 --Group.new('StatusLineNC') -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 --Group.new('StatusLineTerm') -- status line of current :terminal window
 --Group.new('StatusLineTermNC') -- status line of non-current :terminal window
+
 --Group.new('TabLineFill')
 --Group.new('TabLineSel')
 --Group.new('TabLine')
+
 --Group.new('Title') -- titles for output from ":set all", ":autocmd" etc.
 --Group.new('Visual') -- Visual mode selection
 --Group.new('VisualNOS') -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
@@ -584,48 +590,48 @@ Group.new('luaTable', c.no_pink, c.none, no)
 ---- Group.new("LspReferenceRead", c.nord_10, c.none) -- used for highlighting "read" references
 ---- Group.new("LspReferenceWrite", c.nord_10, c.none) -- used for highlighting "write" references
 
----- Nvim Treesitter Groups (descriptions and ordering from `:h nvim-treesitter-highlights`)
+-- Nvim Treesitter Groups (descriptions and ordering from `:h nvim-treesitter-highlights`)
 --Group.new("TSError") -- For syntax/parser errors
 --Group.new("TSPunctDelimiter") -- For delimiters ie: `.
----- Group.new("TSPunctBracket"       , c.fg     , nil) -- For brackets and parens
----- Group.new("TSPunctSpecial"       , c.fg     , nil) -- For special punctutation that does not fall in the catagories before
---Group.new("TSConstant") -- For constants
---Group.new("TSConstBuiltin") -- For constant that are built in the language: `nil` in Lua
---Group.new("TSConstMacro") -- For constants that are defined by macros: `NULL` in C
---Group.new("TSString") -- For strings
----- Group.new("TSStringRegex"        , c.fg_escape_char_construct , nil) -- For regexes
----- Group.new("TSStringEscape"       , c.fg_escape_char_backslash , nil) -- For escape characters within a string
---Group.new("TSCharacter") -- For characters
---Group.new("TSNumber") -- For integers
---Group.new("TSBoolean") -- For booleans
---Group.new("TSFloat") -- For floats
---Group.new("TSFunction") -- For function (calls and definitions
---Group.new("TSFuncBuiltin") -- For builtin functions: `table.insert` in Lua
---Group.new("TSFuncMacro") -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
----- Group.new("TSParameter"          , c.cyan              , c.none  , s.none) -- For parameters of a function.
----- Group.new("TSParameterReference" , g.TSParameter     , nil) -- For references to parameters of a function.
---Group.new("TSMethod") -- For method calls and definitions.
----- Group.new("TSField"    , c.magenta_alt_other , c.none  , s.none) -- For fields.
----- Group.new("TSProperty"    , TSField , c.none  , s.none) -- Same as `TSField`.
----- Group.new("TSConstructor"        , c.magenta_alt       , c.none)  -- For constructor calls and definitions: `{}` in Lua, and Java constructors
---Group.new("TSConditional") -- For keywords related to conditionnals
---Group.new("TSRepeat") -- For keywords related to loops
---Group.new("TSLabel") -- For labels: `label:` in C and `:label:` in Lua
---Group.new("TSOperator") -- For any operator: `+`, but also `->` and `*` in C
---Group.new("TSKeyword") -- For keywords that don't fall in previous categories.
----- Group.new("TSKeywordFunction"    , c.magenta_alt       , c.none  , s.none) -- For keywords used to define a fuction.
---Group.new("TSException") -- For exception related keywords.
---Group.new("TSType") -- For types.
---Group.new("TSTypeBuiltin") -- For builtin types (you guessed it, right ?).
---Group.new("TSStructure") -- This is left as an exercise for the reader.
---Group.new("TSInclude") -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
----- Group.new("TSAnnotation"         , c.blue_nuanced_bg , c.none) -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
----- Group.new("TSText"             , c.fg              , c.bg           , b) -- For strings considered text in a markup language.
----- Group.new("TSStrong"             , c.fg              , c.bg           , b) -- For text to be represented with strong.
----- Group.new("TSEmphasis"            , c.blue_alt          , c.none  , b) -- For text to be represented with emphasis.
----- Group.new("TSUnderline"            , c.blue_alt          , c.none  , b) -- TSUnderline
----- Group.new("TSTitle"              , c.cyan_nuanced    , c.none) -- Text that is part of a title.
----- Group.new("TSLiteral"            , c.blue_alt          , c.none  , b) -- Literal text.
----- Group.new("TSURI"           , c.cyan              , c.none  , s.none) -- Any URI like a link or email.
----- Group.new("TSVariable"           , c.cyan              , c.none  , s.none) -- Any URI like a link or email.
----- Group.new("TSVariableBuiltin" , g.magenta_alt_other     , nil) -- Variable names that are defined by the languages, like `this` or `self`.
+-- Group.new("TSPunctBracket"       , c.fg     , nil) -- For brackets and parens
+-- Group.new("TSPunctSpecial"       , c.fg     , nil) -- For special punctutation that does not fall in the catagories before
+-- Group.new("TSConstant") -- For constants
+-- Group.new("TSConstBuiltin") -- For constant that are built in the language: `nil` in Lua
+-- Group.new("TSConstMacro") -- For constants that are defined by macros: `NULL` in C
+-- Group.new("TSString") -- For strings
+-- Group.new("TSStringRegex"        , c.fg_escape_char_construct , nil) -- For regexes
+-- Group.new("TSStringEscape"       , c.fg_escape_char_backslash , nil) -- For escape characters within a string
+-- Group.new("TSCharacter") -- For characters
+-- Group.new("TSNumber") -- For integers
+-- Group.new("TSBoolean") -- For booleans
+-- Group.new("TSFloat") -- For floats
+-- Group.new("TSFunction") -- For function (calls and definitions
+-- Group.new("TSFuncBuiltin") -- For builtin functions: `table.insert` in Lua
+-- Group.new("TSFuncMacro") -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
+-- Group.new("TSParameter") -- For parameters of a function.
+-- Group.new("TSParameterReference") -- For references to parameters of a function.
+-- Group.new("TSMethod") -- For method calls and definitions.
+-- Group.new("TSField") -- For fields.
+-- Group.new("TSProperty") -- Same as `TSField`.
+-- Group.new("TSConstructor")  -- For constructor calls and definitions: `{}` in Lua, and Java constructors
+-- Group.new("TSConditional") -- For keywords related to conditionnals
+-- Group.new("TSRepeat") -- For keywords related to loops
+-- Group.new("TSLabel") -- For labels: `label:` in C and `:label:` in Lua
+-- Group.new("TSOperator") -- For any operator: `+`, but also `->` and `*` in C
+-- Group.new("TSKeyword") -- For keywords that don't fall in previous categories.
+-- Group.new("TSKeywordFunction") -- For keywords used to define a fuction.
+-- Group.new("TSException") -- For exception related keywords.
+-- Group.new("TSType") -- For types.
+-- Group.new("TSTypeBuiltin") -- For builtin types (you guessed it, right ?).
+-- Group.new("TSStructure") -- This is left as an exercise for the reader.
+-- Group.new("TSInclude") -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+-- Group.new("TSAnnotation") -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+-- Group.new("TSText") -- For strings considered text in a markup language.
+-- Group.new("TSStrong") -- For text to be represented with strong.
+-- Group.new("TSEmphasis") -- For text to be represented with emphasis.
+-- Group.new("TSUnderline") -- TSUnderline
+-- Group.new("TSTitle") -- Text that is part of a title.
+-- Group.new("TSLiteral") -- Literal text.
+-- Group.new("TSURI") -- Any URI like a link or email.
+-- Group.new("TSVariable") -- Any URI like a link or email.
+-- Group.new("TSVariableBuiltin") -- Variable names that are defined by the languages, like `this` or `self`.

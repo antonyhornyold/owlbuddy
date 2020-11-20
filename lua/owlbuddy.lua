@@ -53,85 +53,85 @@ Color.new('no_dk_red',      '#d3423e')
 
 -- TERMINAL COLOURS --
 
-v.terminal_color_0  = '#011627'
-v.terminal_color_1  = '#ff5874'
-v.terminal_color_2  = '#addb67'
-v.terminal_color_3  = '#f78c6c'
-v.terminal_color_4  = '#82aaff'
-v.terminal_color_5  = '#c792ea'
-v.terminal_color_6  = '#7fdbca'
-v.terminal_color_7  = '#0d4572'
-v.terminal_color_8  = '#315572'
-v.terminal_color_9  = '#ff2c83'
-v.terminal_color_10 = '#d9f5dd'
-v.terminal_color_11 = '#f78c6c'
-v.terminal_color_12 = '#82aaff'
-v.terminal_color_13 = '#ff869a'
-v.terminal_color_14 = '#7fdbca'
-v.terminal_color_15 = '#d6deeb'
+-- v.terminal_color_0  = '#011627'
+-- v.terminal_color_1  = '#ff5874'
+-- v.terminal_color_2  = '#addb67'
+-- v.terminal_color_3  = '#f78c6c'
+-- v.terminal_color_4  = '#82aaff'
+-- v.terminal_color_5  = '#c792ea'
+-- v.terminal_color_6  = '#7fdbca'
+-- v.terminal_color_7  = '#0d4572'
+-- v.terminal_color_8  = '#315572'
+-- v.terminal_color_9  = '#ff2c83'
+-- v.terminal_color_10 = '#d9f5dd'
+-- v.terminal_color_11 = '#f78c6c'
+-- v.terminal_color_12 = '#82aaff'
+-- v.terminal_color_13 = '#ff869a'
+-- v.terminal_color_14 = '#7fdbca'
+-- v.terminal_color_15 = '#d6deeb'
 
 -- SYNTAX GROUPS --
 
-Group.new('Comment', c.no_comment_two, c.none, i) -- any comment
-Group.new('Constant', c.no_blue, c.none, no) -- any constant
-Group.new('String', c.no_yellow, c.none, no) -- this is a string
-Group.new('Character', c.no_yellow, c.none, no) -- a character constant: 'c', '\n'
-Group.new('Boolean', c.no_red, c.none, no) -- a boolean constant: TRUE, false
-Group.new('Float', c.no_orange, c.none, no) -- a floating point constant: 2.3e10
-Group.new('Identifier', c.no_cyan, c.none, no) -- any variable name
-Group.new('Function', c.no_purple, c.none, b) -- function name (also: methods for classes)
-Group.new('Statement', c.no_blue, c.none, no) -- any statement
-Group.new('Conditional', c.no_purple, c.none, no) -- if, then, else, endif, switch, etc.
-Group.new('Repeat', c.no_green, c.none, no) -- for, do, while, etc.
-Group.new('Label', c.no_pink, c.none, no) -- case, default, etc.
-Group.new('Operator', c.no_purple, c.none, no) -- sizeof", "+", "*", etc.
-Group.new('Keyword', c.no_pink, c.none, b) -- any other keyword
-Group.new('Exception', c.no_green, c.none, no) -- try, catch, throw
-Group.new('PreProc', c.no_purple, c.none, no) -- generic Preprocessor
-Group.new('Include', c.no_blue, c.none, no) -- preprocessor #include
-Group.new('Define', c.no_blue, c.none, b) -- preprocessor #define
-Group.new('Macro', c.no_blue, c.none, i) -- same as Define
-Group.new('PreCondit', c.no_green, c.none, no) -- preprocessor #if, #else, #endif, etc.
+Group.new('Comment',        c.no_comment_two,     c.none,       i) -- any comment
+Group.new('Constant',       c.no_blue,            c.none,       no) -- any constant
+Group.new('String',         c.no_yellow,          c.none,       no) -- this is a string
+Group.new('Character',      c.no_yellow,          c.none,       no) -- a character constant: 'c', '\n'
+Group.new('Boolean',        c.no_red,             c.none,       no) -- a boolean constant: TRUE, false
+Group.new('Float',          c.no_orange,          c.none,       no) -- a floating point constant: 2.3e10
+Group.new('Identifier',     c.no_cyan,            c.none,       no) -- any variable name
+Group.new('Function',       c.no_purple,          c.none,       b) -- function name (also: methods for classes)
+Group.new('Statement',      c.no_blue,            c.none,       no) -- any statement
+Group.new('Conditional',    c.no_purple,          c.none,       no) -- if, then, else, endif, switch, etc.
+Group.new('Repeat',         c.no_green,           c.none,       no) -- for, do, while, etc.
+Group.new('Label',          c.no_pink,            c.none,       no) -- case, default, etc.
+Group.new('Operator',       c.no_purple,          c.none,       no) -- sizeof", "+", "*", etc.
+Group.new('Keyword',        c.no_pink,            c.none,       b) -- any other keyword
+Group.new('Exception',      c.no_green,           c.none,       no) -- try, catch, throw
+Group.new('PreProc',        c.no_purple,          c.none,       no) -- generic Preprocessor
+Group.new('Include',        c.no_blue,            c.none,       no) -- preprocessor #include
+Group.new('Define',         c.no_blue,            c.none,       b) -- preprocessor #define
+Group.new('Macro',          c.no_blue,            c.none,       i) -- same as Define
+Group.new('PreCondit',      c.no_green,           c.none,       no) -- preprocessor #if, #else, #endif, etc.
 --Group.new('Type') -- int, long, char, etc.
-Group.new('StorageClass', c.no_pink, c.none, no) -- static, register, volatile, etc.
-Group.new('Structure', c.no_pink, c.none, b) -- struct, union, enum, etc.
-Group.new('Typedef', c.no_pink, c.none, i) -- A typedef
+Group.new('StorageClass',   c.no_pink,            c.none,       no) -- static, register, volatile, etc.
+Group.new('Structure',      c.no_pink,            c.none,       b) -- struct, union, enum, etc.
+Group.new('Typedef',        c.no_pink,            c.none,       i) -- A typedef
 --Group.new('Special') -- any special symbol
 --Group.new('SpecialChar') -- special character in a constant
 --Group.new('Tag') -- you can use CTRL-] on this
-Group.new('Delimiter', c.no_cyan, c.none, no) -- character that needs attention
-Group.new('SpecialComment', c.no_comment_one, c.none, no) -- special things inside a comment
+Group.new('Delimiter',      c.no_cyan,            c.none,       no) -- character that needs attention
+Group.new('SpecialComment', c.no_comment_one,     c.none,       no) -- special things inside a comment
 --Group.new('Debug') -- debugging statements
-Group.new('Underlined', c.none, c.none, ul) -- text that stands out, HTML links
-Group.new('Ignore', c.no_bg, c.none, no) -- left blank, hidden
-Group.new('Error', c.no_lt_fg, c.no_br_red, b) -- any erroneous construct
-Group.new('Todo', c.no_fg, c.no_01, ul + b) -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+Group.new('Underlined',     c.none,               c.none,       ul) -- text that stands out, HTML links
+Group.new('Ignore',         c.no_bg,              c.none,       no) -- left blank, hidden
+Group.new('Error',          c.no_lt_fg,           c.no_br_red,  b) -- any erroneous construct
+Group.new('Todo',           c.no_fg,              c.no_01,      ul + b) -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 -- HIGHLIGHTING GROUP --
 
-Group.new('ColorColumn', c.none, c.no_03, no) --  used for the columns set with 'colorcolumn'
-Group.new('Conceal' c.no_bg, c.none, no) -- placeholder characters substituted for concealed text (see 'conceallevel')
+Group.new('ColorColumn',    c.none,               c.no_03,      no) --  used for the columns set with 'colorcolumn'
+Group.new('Conceal'         c.no_bg,              c.none,       no) -- placeholder characters substituted for concealed text (see 'conceallevel')
 --Group.new('Cursor') -- the character under the cursor
 --Group.new('CursorIM') -- like Cursor, but used when in IME mode
-Group.new('Directory' c.no_blue, c.none, b) -- directory names (and other special names in listings)
+Group.new('Directory'       c.no_blue,            c.none,       b) -- directory names (and other special names in listings)
 --Group.new('DiffAdd') -- diff mode: Added line
 --Group.new('DiffChange') --  diff mode: Changed line
 --Group.new('DiffDelete') -- diff mode: Deleted line
 --Group.new('DiffText') -- diff mode: Changed text within a changed line
-Group.new('EndOfBuffer', c.no_bg, c.none, no) -- filler lines (~) after the last line in the buffer
+Group.new('EndOfBuffer',    c.no_bg,              c.none,       no) -- filler lines (~) after the last line in the buffer
 --Group.new('ErrorMsg') -- error messages on the command line
-Group.new('VertSplit', c.no_bg, c.no_bg, no) -- the column separating verti-- cally split windows
+Group.new('VertSplit',      c.no_bg,              c.no_bg,      no) -- the column separating verti-- cally split windows
 --Group.new('Folded') -- line used for closed folds
 --Group.new('FoldColumn') -- 'foldcolumn'
-Group.new('SignColumn', c.none, c.no_bg, no) -- column where signs are displayed
+Group.new('SignColumn',     c.none,               c.no_bg,      no) -- column where signs are displayed
 --Group.new('IncSearch') -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-Group.new('LineNr', c.no_comment_one, c.no_03, no) -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-Group.new('CursorLineNr', c.no_lt_fg, c.none, b) -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+Group.new('LineNr',         c.no_comment_one,     c.no_03,      no) -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+Group.new('CursorLineNr',   c.no_lt_fg,           c.none,       b) -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 --Group.new('MatchParen') -- The character under the cursor or just before it, if it is a paired bracket, and its match.
 --Group.new('ModeMsg') -- 'showmode' message (e.g., "-- INSERT --")
 --Group.new('MoreMsg') -- more-prompt
 --Group.new('NonText') -- '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
-Group.new('Normal', c.no_fg, c.no_bg, no) -- normal text
+Group.new('Normal',         c.no_fg,              c.no_bg,      no) -- normal text
 
 --Group.new('Pmenu') -- Popup menu: normal item.
 --Group.new('PmenuSel') -- Popup menu: selected item.

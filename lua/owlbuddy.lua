@@ -598,7 +598,7 @@ Group.new('luaTable', c.no_pink, c.none, no)
 -- Group.new("TSPunctSpecial",        ) -- For special punctutation that does not fall in the catagories before
 Group.new("TSConstant",             c.no_blue,        c.none,       b) -- For constants
 Group.new("TSConstBuiltin",         c.no_blue,        c.none,       b) -- For constant that are built in the language: `nil` in Lua
-Group.new("TSConstMacro",           co.no_blue,       c.none,       b) -- For constants that are defined by macros: `NULL` in C
+Group.new("TSConstMacro",           c.no_blue,        c.none,       b) -- For constants that are defined by macros: `NULL` in C
 Group.new("TSString",               c.no_yellow,      c.none,       no) -- For strings
 Group.new("TSStringRegex",          c.no_yellow,      c.none,       no) -- For regexes
 Group.new("TSStringEscape",         c.no_lt_yellow,   c.none,       no) -- For escape characters within a string

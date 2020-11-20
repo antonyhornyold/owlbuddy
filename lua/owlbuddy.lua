@@ -110,10 +110,10 @@ Group.new('Todo',           c.no_fg,              c.no_01,      ul + b) -- anyth
 -- HIGHLIGHTING GROUP --
 
 Group.new('ColorColumn',    c.none,               c.no_03,      no) --  used for the columns set with 'colorcolumn'
-Group.new('Conceal'         c.no_bg,              c.none,       no) -- placeholder characters substituted for concealed text (see 'conceallevel')
+Group.new('Conceal',        c.no_bg,              c.none,       no) -- placeholder characters substituted for concealed text (see 'conceallevel')
 --Group.new('Cursor') -- the character under the cursor
 --Group.new('CursorIM') -- like Cursor, but used when in IME mode
-Group.new('Directory'       c.no_blue,            c.none,       b) -- directory names (and other special names in listings)
+Group.new('Directory',      c.no_blue,            c.none,       b) -- directory names (and other special names in listings)
 --Group.new('DiffAdd') -- diff mode: Added line
 --Group.new('DiffChange') --  diff mode: Changed line
 --Group.new('DiffDelete') -- diff mode: Deleted line

@@ -92,7 +92,7 @@ Group.new('Include',        c.no_blue,            c.none,       no) -- preproces
 Group.new('Define',         c.no_blue,            c.none,       b) -- preprocessor #define
 Group.new('Macro',          c.no_blue,            c.none,       i) -- same as Define
 Group.new('PreCondit',      c.no_green,           c.none,       no) -- preprocessor #if, #else, #endif, etc.
---Group.new('Type') -- int, long, char, etc.
+Group.new('Type',           c.no_pink,            c.none,       no) -- int, long, char, etc.
 Group.new('StorageClass',   c.no_pink,            c.none,       no) -- static, register, volatile, etc.
 Group.new('Structure',      c.no_pink,            c.none,       b) -- struct, union, enum, etc.
 Group.new('Typedef',        c.no_pink,            c.none,       i) -- A typedef
@@ -590,48 +590,49 @@ Group.new('luaTable', c.no_pink, c.none, no)
 ---- Group.new("LspReferenceRead", c.nord_10, c.none) -- used for highlighting "read" references
 ---- Group.new("LspReferenceWrite", c.nord_10, c.none) -- used for highlighting "write" references
 
--- Nvim Treesitter Groups (descriptions and ordering from `:h nvim-treesitter-highlights`)
---Group.new("TSError") -- For syntax/parser errors
---Group.new("TSPunctDelimiter") -- For delimiters ie: `.
--- Group.new("TSPunctBracket"       , c.fg     , nil) -- For brackets and parens
--- Group.new("TSPunctSpecial"       , c.fg     , nil) -- For special punctutation that does not fall in the catagories before
--- Group.new("TSConstant") -- For constants
--- Group.new("TSConstBuiltin") -- For constant that are built in the language: `nil` in Lua
--- Group.new("TSConstMacro") -- For constants that are defined by macros: `NULL` in C
--- Group.new("TSString") -- For strings
--- Group.new("TSStringRegex"        , c.fg_escape_char_construct , nil) -- For regexes
--- Group.new("TSStringEscape"       , c.fg_escape_char_backslash , nil) -- For escape characters within a string
--- Group.new("TSCharacter") -- For characters
--- Group.new("TSNumber") -- For integers
--- Group.new("TSBoolean") -- For booleans
--- Group.new("TSFloat") -- For floats
--- Group.new("TSFunction") -- For function (calls and definitions
--- Group.new("TSFuncBuiltin") -- For builtin functions: `table.insert` in Lua
--- Group.new("TSFuncMacro") -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
--- Group.new("TSParameter") -- For parameters of a function.
--- Group.new("TSParameterReference") -- For references to parameters of a function.
--- Group.new("TSMethod") -- For method calls and definitions.
--- Group.new("TSField") -- For fields.
--- Group.new("TSProperty") -- Same as `TSField`.
--- Group.new("TSConstructor")  -- For constructor calls and definitions: `{}` in Lua, and Java constructors
--- Group.new("TSConditional") -- For keywords related to conditionnals
--- Group.new("TSRepeat") -- For keywords related to loops
--- Group.new("TSLabel") -- For labels: `label:` in C and `:label:` in Lua
--- Group.new("TSOperator") -- For any operator: `+`, but also `->` and `*` in C
--- Group.new("TSKeyword") -- For keywords that don't fall in previous categories.
--- Group.new("TSKeywordFunction") -- For keywords used to define a fuction.
--- Group.new("TSException") -- For exception related keywords.
--- Group.new("TSType") -- For types.
--- Group.new("TSTypeBuiltin") -- For builtin types (you guessed it, right ?).
--- Group.new("TSStructure") -- This is left as an exercise for the reader.
--- Group.new("TSInclude") -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
--- Group.new("TSAnnotation") -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
--- Group.new("TSText") -- For strings considered text in a markup language.
--- Group.new("TSStrong") -- For text to be represented with strong.
--- Group.new("TSEmphasis") -- For text to be represented with emphasis.
--- Group.new("TSUnderline") -- TSUnderline
--- Group.new("TSTitle") -- Text that is part of a title.
--- Group.new("TSLiteral") -- Literal text.
--- Group.new("TSURI") -- Any URI like a link or email.
--- Group.new("TSVariable") -- Any URI like a link or email.
--- Group.new("TSVariableBuiltin") -- Variable names that are defined by the languages, like `this` or `self`.
+-- NVIM TREESITTER GROUPS
+
+-- Group.new("TSError",               ) -- For syntax/parser errors
+-- Group.new("TSPunctDelimiter",      ) -- For delimiters ie: `.
+-- Group.new("TSPunctBracket",        ) -- For brackets and parens
+-- Group.new("TSPunctSpecial",        ) -- For special punctutation that does not fall in the catagories before
+Group.new("TSConstant",             c.no_blue,        c.none,       b) -- For constants
+Group.new("TSConstBuiltin",         c.no_blue,        c.none,       b) -- For constant that are built in the language: `nil` in Lua
+Group.new("TSConstMacro",           co.no_blue,       c.none,       b) -- For constants that are defined by macros: `NULL` in C
+Group.new("TSString",               c.no_yellow,      c.none,       no) -- For strings
+Group.new("TSStringRegex",          c.no_yellow,      c.none,       no) -- For regexes
+Group.new("TSStringEscape",         c.no_lt_yellow,   c.none,       no) -- For escape characters within a string
+-- Group.new("TSCharacter",           ) -- For characters
+-- Group.new("TSNumber",              ) -- For integers
+-- Group.new("TSBoolean",             ) -- For booleans
+-- Group.new("TSFloat",               ) -- For floats
+Group.new("TSFunction",             c.no_purple,      c.none,       b) -- For function (calls and definitions
+Group.new("TSFuncBuiltin",          c.no_purple,      c.none,       no) -- For builtin functions: `table.insert` in Lua
+Group.new("TSFuncMacro",            c.no_purple,      c.none,       no) -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
+-- Group.new("TSParameter",           ) -- For parameters of a function.
+-- Group.new("TSParameterReference",  ) -- For references to parameters of a function.
+Group.new("TSMethod",               c.no_orange,      c.none,       no) -- For method calls and definitions.
+Group.new("TSField",                c.no_pink,        c.none,       i) -- For fields.
+Group.new("TSProperty",             c.no_pink,        c.none,       i) -- Same as `TSField`.
+Group.new("TSConstructor",          c.no_br_red,      c.none,       no)  -- For constructor calls and definitions: `{}` in Lua, and Java constructors
+-- Group.new("TSConditional",         ) -- For keywords related to conditionnals
+-- Group.new("TSRepeat",              ) -- For keywords related to loops
+-- Group.new("TSLabel",               ) -- For labels: `label:` in C and `:label:` in Lua
+-- Group.new("TSOperator",            ) -- For any operator: `+`, but also `->` and `*` in C
+-- Group.new("TSKeyword",             ) -- For keywords that don't fall in previous categories.
+-- Group.new("TSKeywordFunction",     ) -- For keywords used to define a fuction.
+-- Group.new("TSException",           ) -- For exception related keywords.
+-- Group.new("TSType",                ) -- For types.
+-- Group.new("TSTypeBuiltin",         ) -- For builtin types (you guessed it, right ?).
+-- Group.new("TSStructure",           ) -- This is left as an exercise for the reader.
+Group.new("TSInclude",             c.no_pink,          c.none,         no) -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+-- Group.new("TSAnnotation",          ) -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+-- Group.new("TSText",                ) -- For strings considered text in a markup language.
+-- Group.new("TSStrong",              ) -- For text to be represented with strong.
+-- Group.new("TSEmphasis",            ) -- For text to be represented with emphasis.
+-- Group.new("TSUnderline",           ) -- TSUnderline
+-- Group.new("TSTitle",               ) -- Text that is part of a title.
+-- Group.new("TSLiteral",             ) -- Literal text.
+-- Group.new("TSURI",                 ) -- Any URI like a link or email.
+-- Group.new("TSVariable",            ) -- Any URI like a link or email.
+-- Group.new("TSVariableBuiltin",     ) -- Variable names that are defined by the languages, like `this` or `self`.

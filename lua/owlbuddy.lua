@@ -96,12 +96,12 @@ Group.new('Type',           c.no_pink,            c.none,       no) -- int, long
 Group.new('StorageClass',   c.no_pink,            c.none,       no) -- static, register, volatile, etc.
 Group.new('Structure',      c.no_pink,            c.none,       b) -- struct, union, enum, etc.
 Group.new('Typedef',        c.no_pink,            c.none,       i) -- A typedef
---Group.new('Special') -- any special symbol
---Group.new('SpecialChar') -- special character in a constant
---Group.new('Tag') -- you can use CTRL-] on this
+Group.new('Special',        c.no_yellow,          c.none,       no) -- any special symbol
+Group.new('SpecialChar',    c.no_yellow,          c.none,       b) -- special character in a constant
+Group.new('Tag',            c.no_cyan,            c.none,       no) -- you can use CTRL-] on this
 Group.new('Delimiter',      c.no_cyan,            c.none,       no) -- character that needs attention
 Group.new('SpecialComment', c.no_comment_one,     c.none,       no) -- special things inside a comment
---Group.new('Debug') -- debugging statements
+Group.new('Debug',          c.no_pink,            c.none,       i) -- debugging statements
 Group.new('Underlined',     c.none,               c.none,       ul) -- text that stands out, HTML links
 Group.new('Ignore',         c.no_bg,              c.none,       no) -- left blank, hidden
 Group.new('Error',          c.no_lt_fg,           c.no_br_red,  b) -- any erroneous construct

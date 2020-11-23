@@ -606,8 +606,8 @@ Group.new("TSStringEscape",         c.no_lt_yellow,   c.none,       no) -- For e
 -- Group.new("TSNumber",              ) -- For integers
 -- Group.new("TSBoolean",             ) -- For booleans
 -- Group.new("TSFloat",               ) -- For floats
-Group.new("TSFunction",             c.no_purple,      c.none,       b) -- For function (calls and definitions
-Group.new("TSFuncBuiltin",          c.no_purple,      c.none,       no) -- For builtin functions: `table.insert` in Lua
+Group.new("TSFunction",             c.no_blue,        c.none,       i) -- For function (calls and definitions
+Group.new("TSFuncBuiltin",          c.no_blue,        c.none,       no) -- For builtin functions: `table.insert` in Lua
 Group.new("TSFuncMacro",            c.no_purple,      c.none,       no) -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
 -- Group.new("TSParameter",           ) -- For parameters of a function.
 -- Group.new("TSParameterReference",  ) -- For references to parameters of a function.

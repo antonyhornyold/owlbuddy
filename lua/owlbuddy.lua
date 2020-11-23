@@ -634,5 +634,5 @@ Group.new("TSInclude",             c.no_pink,          c.none,         no) -- Fo
 -- Group.new("TSTitle",               ) -- Text that is part of a title.
 -- Group.new("TSLiteral",             ) -- Literal text.
 -- Group.new("TSURI",                 ) -- Any URI like a link or email.
--- Group.new("TSVariable",            ) -- Any URI like a link or email.
--- Group.new("TSVariableBuiltin",     ) -- Variable names that are defined by the languages, like `this` or `self`.
+Group.new("TSVariable",            c.no_blue,           c.none,         b) -- Any URI like a link or email.
+Group.new("TSVariableBuiltin",     c.no_blue,           c.no_pink,      b + i) -- Variable names that are defined by the languages, like `this` or `self`.

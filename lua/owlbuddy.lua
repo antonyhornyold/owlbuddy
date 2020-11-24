@@ -111,12 +111,12 @@ Group.new('Todo',           c.no_fg,              c.no_01,      ul + b) -- anyth
 
 Group.new('ColorColumn',    c.none,               c.no_03,      no) --  used for the columns set with 'colorcolumn'
 Group.new('Conceal',        c.no_bg,              c.none,       no) -- placeholder characters substituted for concealed text (see 'conceallevel')
---Group.new('Cursor') -- the character under the cursor
---Group.new('CursorIM') -- like Cursor, but used when in IME mode
+Group.new('Cursor',         c.none,               c.none,       sto) -- the character under the cursor
+Group.new('CursorIM',       c.none,               c.none,       sto) -- like Cursor, but used when in IME mode
 Group.new('Directory',      c.no_blue,            c.none,       b) -- directory names (and other special names in listings)
---Group.new('DiffAdd') -- diff mode: Added line
---Group.new('DiffChange') --  diff mode: Changed line
---Group.new('DiffDelete') -- diff mode: Deleted line
+Group.new('DiffAdd',        c.none,               c.no_green,   no) -- diff mode: Added line
+Group.new('DiffChange',     c.none,               c.no_orange,  no) --  diff mode: Changed line
+Group.new('DiffDelete',     c.none,               c.no_red,     no) -- diff mode: Deleted line
 --Group.new('DiffText') -- diff mode: Changed text within a changed line
 Group.new('EndOfBuffer',    c.no_bg,              c.none,       no) -- filler lines (~) after the last line in the buffer
 --Group.new('ErrorMsg') -- error messages on the command line

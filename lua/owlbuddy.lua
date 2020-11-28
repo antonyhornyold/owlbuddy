@@ -105,7 +105,7 @@ Group.new('Debug',          c.no_pink,            c.none,       i) -- debugging 
 Group.new('Underlined',     c.none,               c.none,       ul) -- text that stands out, HTML links
 Group.new('Ignore',         c.no_bg,              c.none,       no) -- left blank, hidden
 Group.new('Error',          c.no_lt_fg,           c.no_br_red,  b) -- any erroneous construct
-Group.new('Todo',           c.no_fg,              c.no_01,      ul + b) -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+Group.new('Todo',           c.no_fg,              c.no_01,      uc + b) -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 -- HIGHLIGHTING GROUP --
 

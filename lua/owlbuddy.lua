@@ -121,7 +121,7 @@ Group.new('DiffDelete',     c.none,               c.no_red,     no) -- diff mode
 Group.new('EndOfBuffer',    c.no_bg,              c.none,       no) -- filler lines (~) after the last line in the buffer
 --Group.new('ErrorMsg') -- error messages on the command line
 Group.new('VertSplit',      c.no_bg,              c.no_bg,      no) -- the column separating verti-- cally split windows
---Group.new('Folded') -- line used for closed folds
+Group.new('Folded',         c.no_06,              c.no_01,      no) -- line used for closed folds
 --Group.new('FoldColumn') -- 'foldcolumn'
 Group.new('SignColumn',     c.none,               c.no_bg,      no) -- column where signs are displayed
 --Group.new('IncSearch') -- 'incsearch' highlighting; also used for the text replaced with ":s///c"

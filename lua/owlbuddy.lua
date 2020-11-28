@@ -119,7 +119,7 @@ Group.new('DiffChange',     c.none,               c.no_orange,  no) --  diff mod
 Group.new('DiffDelete',     c.none,               c.no_red,     no) -- diff mode: Deleted line
 --Group.new('DiffText') -- diff mode: Changed text within a changed line
 Group.new('EndOfBuffer',    c.no_bg,              c.none,       no) -- filler lines (~) after the last line in the buffer
---Group.new('ErrorMsg') -- error messages on the command line
+Group.new('ErrorMsg',       c.no_lt_fg,           c.no_red,     b) -- error messages on the command line
 Group.new('VertSplit',      c.no_bg,              c.no_bg,      no) -- the column separating verti-- cally split windows
 Group.new('Folded',         c.no_06,              c.no_01,      no) -- line used for closed folds
 --Group.new('FoldColumn') -- 'foldcolumn'

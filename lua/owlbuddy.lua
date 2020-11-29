@@ -128,7 +128,7 @@ Group.new('SignColumn',     c.none,               c.no_bg,      no) -- column wh
 Group.new('LineNr',         c.no_comment_one,     c.no_03,      no) -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 Group.new('CursorLineNr',   c.no_lt_fg,           c.none,       b) -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 --Group.new('MatchParen') -- The character under the cursor or just before it, if it is a paired bracket, and its match.
---Group.new('ModeMsg') -- 'showmode' message (e.g., "-- INSERT --")
+Group.new('ModeMsg',        c.no_comment_one,     c.none,       no) -- 'showmode' message (e.g., "-- INSERT --")
 --Group.new('MoreMsg') -- more-prompt
 --Group.new('NonText') -- '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
 Group.new('Normal',         c.no_fg,              c.no_bg,      no) -- normal text
